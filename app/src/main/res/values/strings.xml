@@ -4,4 +4,6 @@
     <string name="btn_subtracao">Subtração</string>
     <string name="btn_multiplicacao">Multiplicação</string>
     <string name="btn_divisao">Divisão</string>
+    <string name="btn_sair">Sair</string>
+    <string name="btn_sobre">Sobre</string>
 </resources>
