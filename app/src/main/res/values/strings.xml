@@ -1,9 +1,36 @@
 <resources>
-    <string name="app_name">TabuadaBasica</string>
+    <string name="app_name">Tabuada Básica</string>
     <string name="btn_adicao">Adição</string>
     <string name="btn_subtracao">Subtração</string>
     <string name="btn_multiplicacao">Multiplicação</string>
     <string name="btn_divisao">Divisão</string>
     <string name="btn_sair">Sair</string>
     <string name="btn_sobre">Sobre</string>
+    <string name="title_activity_adicao_main">Tabuada de +</string>
+    <string name="title_activity_subtracao_main">Tabuada de -</string>
+    <string name="title_activity_multiplicacao_main">Tabuada de X</string>
+    <string name="title_activity_divisao_main">Tabuada de /</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Voltar</string>
+    <string name="tabuada_0">Tabuada do  0</string>
+    <string name="tabuada_1">Tabuada do  1</string>
+    <string name="tabuada_2">Tabuada do  2</string>
+    <string name="tabuada_3">Tabuada do  3</string>
+    <string name="tabuada_4">Tabuada do  4</string>
+    <string name="tabuada_5">Tabuada do  5</string>
+    <string name="tabuada_6">Tabuada do  6</string>
+    <string name="tabuada_7">Tabuada do  7</string>
+    <string name="tabuada_8">Tabuada do  8</string>
+    <string name="tabuada_9">Tabuada do  9</string>
+    <string name="tabuada_10">Tabuada do 10</string>
+    <string name="tabuada_td">Todas de 0 à 10</string>
+    <string name="tabuada_adicao">Tabuada de +</string>
+    <string name="tabuada_sub">Tabuada de -</string>
+    <string name="tabuada_multi">Tabuada de x</string>
+    <string name="tabuada_divi">Tabuada de /</string>
+
 </resources>

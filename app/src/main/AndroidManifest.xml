@@ -16,7 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdicaoActivity"></activity>
+        <activity
+        android:name=".AdicaoActivityMain"
+        android:label="@string/title_activity_adicao_main"
+        android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".SubtracaoActivityMain"
+            android:label="@string/title_activity_subtracao_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MultiplicacaoActivityMain"
+            android:label="@string/title_activity_multiplicacao_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DivisaoActivityMain"
+            android:label="@string/title_activity_divisao_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

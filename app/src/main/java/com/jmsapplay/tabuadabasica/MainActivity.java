@@ -34,10 +34,37 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent proximaAct = new Intent( MainActivity.this, AdicaoActivity.class);
+                Intent proximaAct = new Intent( MainActivity.this, AdicaoActivityMain.class);
                 startActivity(proximaAct);
 
 
+            }
+        });
+
+        btnSubtracao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent proximaAct = new Intent( MainActivity.this, SubtracaoActivityMain.class);
+                startActivity(proximaAct);
+            }
+        });
+
+        btnMultiplicacao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent proximaAct = new Intent( MainActivity.this, MultiplicacaoActivityMain.class);
+                startActivity(proximaAct);
+
+            }
+        });
+
+        btnDivisao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent proximaAct = new Intent( MainActivity.this, DivisaoActivityMain.class);
+                startActivity(proximaAct);
             }
         });
 
