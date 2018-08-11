@@ -1,6 +1,7 @@
 package com.jmsapplay.tabuadabasica;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +16,9 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +38,7 @@ public class SubtracaoActivityMain extends AppCompatActivity
         setContentView(R.layout.activity_adicao_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -175,5 +179,17 @@ public class SubtracaoActivityMain extends AppCompatActivity
                 }
             }
         }
+    }
+    protected void onResume() {
+        super.onResume();
+
+        bannerADS();
+    }
+    public  void bannerADS(){
+        AdView adView;
+        adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
     }
 }

@@ -1,11 +1,14 @@
 package com.jmsapplay.tabuadabasica;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +17,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +39,7 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
         setContentView(R.layout.activity_persona);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         listPersona = findViewById(R.id.listPersona);
 
@@ -49,7 +55,12 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+
+                editValor1.setText("");
+                editValor2.setText("");
+                editValor1.requestFocus();
+
+                Snackbar.make(view, "Campos limpos", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -178,6 +189,29 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
         });
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_persona, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.btnSair:
+                finish();
+
+                break;
+            case R.id.btnSobre:
+                Toast.makeText(this, "Sobre", Toast.LENGTH_LONG).show();
+            default:
+                break;
+        }
+        return true;
+    }
+
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -194,12 +228,7 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
 
-
-    }
 
     private void calcularTabuada(int val1 , int val2){
         List<String> list = new ArrayList<>();
@@ -285,6 +314,17 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
 
         }
     }
+    protected void onResume() {
+        super.onResume();
 
+        bannerADS();
+    }
+    public  void bannerADS(){
+        AdView adView;
+        adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
+    }
 
 }

@@ -104,6 +104,20 @@
         android:text="@string/txt_menor_igual"
         android:textColor="@color/colorFont"
         android:textSize="50sp" />
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listPersona"
 
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/listaAdicao">
+
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

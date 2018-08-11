@@ -42,4 +42,10 @@
     <string name="btn_cus_mu">x</string>
     <string name="btn_cus_div">/</string>
     <string name="txt_menor_igual">>=</string>
+
+    <!--ADS tags-->
+
+    <string name="banner_ad">ca-app-pub-9275202133724780/3108357143</string>
+
+    <!--fim ADS -->
 </resources>
