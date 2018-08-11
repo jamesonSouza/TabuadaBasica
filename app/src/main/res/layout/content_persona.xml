@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PersonaActivity"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_persona">
+
+
+    <EditText
+        android:id="@+id/editValor1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/valor_1"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editValor2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/editValor1"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:hint="@string/valor_2"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnAdicao"
+        android:layout_width="72dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editValor1"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/btn_customizados"
+        android:text="@string/btn_cus_ad"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="72dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/editValor1"
+        android:layout_toEndOf="@+id/btnAdicao"
+        android:background="@drawable/btn_customizados"
+        android:text="@string/btn_cus_su"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:textAllCaps="true"
+        android:textSize="15sp" />
+    <Button
+        android:id="@+id/btnMulti"
+        android:layout_width="72dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="31dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/editValor2"
+        android:layout_toEndOf="@+id/btnSub"
+        android:background="@drawable/btn_customizados"
+        android:text="@string/btn_cus_mu"
+        android:textAllCaps="true"
+        android:textSize="15sp" />
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_marginLeft="5dp"
+        android:layout_width="72dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/editValor2"
+        android:layout_toEndOf="@+id/btnMulti"
+        android:background="@drawable/btn_customizados"
+        android:text="@string/btn_cus_div"
+        android:textAllCaps="true"
+        android:textSize="15sp" />
+
+    <ListView
+        android:id="@+id/listPersona"
+        android:layout_width="match_parent"
+        android:layout_height="314dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editValor1"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="65dp"
+        android:layout_height="54dp"
+        android:layout_alignBottom="@+id/editValor1"
+        android:layout_toStartOf="@+id/editValor2"
+        android:text="@string/txt_menor_igual"
+        android:textColor="@color/colorFont"
+        android:textSize="50sp" />
+
+
+</RelativeLayout>

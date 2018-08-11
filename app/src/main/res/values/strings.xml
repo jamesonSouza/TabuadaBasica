@@ -32,5 +32,14 @@
     <string name="tabuada_sub">Tabuada de -</string>
     <string name="tabuada_multi">Tabuada de x</string>
     <string name="tabuada_divi">Tabuada de /</string>
+    <string name="title_activity_persona">Tabuada Personalizada</string>
 
+    <string name="valor_1">Num 1</string>
+    <string name="valor_2">Num 2</string>
+    <string name="btn_persona">TABUADA PERSONALIZÁVEL</string>
+    <string name="btn_cus_ad">+</string>
+    <string name="btn_cus_su">-</string>
+    <string name="btn_cus_mu">x</string>
+    <string name="btn_cus_div">/</string>
+    <string name="txt_menor_igual">>=</string>
 </resources>

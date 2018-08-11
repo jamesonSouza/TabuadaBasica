@@ -17,20 +17,24 @@
             </intent-filter>
         </activity>
         <activity
-        android:name=".AdicaoActivityMain"
-        android:label="@string/title_activity_adicao_main"
-        android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".AdicaoActivityMain"
+            android:label="@string/title_activity_adicao_main"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SubtracaoActivityMain"
             android:label="@string/title_activity_subtracao_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MultiplicacaoActivityMain"
             android:label="@string/title_activity_multiplicacao_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DivisaoActivityMain"
             android:label="@string/title_activity_divisao_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PersonaActivity"
+            android:label="@string/title_activity_persona"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

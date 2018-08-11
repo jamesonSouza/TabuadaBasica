@@ -8,16 +8,18 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
 import java.util.zip.Inflater;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
 
-    Button btnAdicao, btnSubtracao, btnMultiplicacao, btnDivisao;
+    Button btnAdicao, btnSubtracao, btnMultiplicacao, btnDivisao, btnPersona;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btnSubtracao= findViewById(R.id.btnSubtracao);
         btnMultiplicacao= findViewById(R.id.btnMultiplicacao);
         btnDivisao= findViewById(R.id.btnDivisao);
-
+        btnPersona = findViewById(R.id.btnPersona);
 
         btnAdicao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(proximaAct);
             }
         });
+        btnPersona.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent proximaAct = new Intent( MainActivity.this, PersonaActivity.class);
+                startActivity(proximaAct);
+            }
+        });
 
     }
 
@@ -91,4 +100,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
 }

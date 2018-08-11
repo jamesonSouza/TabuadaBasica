@@ -168,7 +168,7 @@ public class SubtracaoActivityMain extends AppCompatActivity
 
                     resultado = valor1 - valor2;
 
-                    lista.add(String.valueOf(valor1) + "  -  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
+                    lista.add(String.valueOf(valor1 + valor2) + "  -  " + String.valueOf(valor1) + "  =  " + String.valueOf(valor2));
                     ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
                     listadicao.setAdapter(adpter);
 

@@ -2,9 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view"
+
     >
 
+    <group android:id="@+id/gb_group"
+        android:menuCategory="container">
             <item
+
                 android:id="@+id/m00"
 
                 android:title="@string/tabuada_0" />
@@ -49,7 +53,7 @@
 
                 android:title="@string/tabuada_10" />
 
-
+    </group>
     <item
         android:id="@+id/mt"
 

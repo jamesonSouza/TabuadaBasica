@@ -11,7 +11,7 @@
     android:id="@+id/btnAdicao"
     android:background="@drawable/btn_customizados"
     android:layout_width="fill_parent"
-    android:layout_height="70dp"
+    android:layout_height="50dp"
 
     android:layout_alignParentStart="true"
     android:layout_alignParentTop="true"
@@ -21,7 +21,7 @@
     <Button
         android:id="@+id/btnSubtracao"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btnAdicao"
         android:background="@drawable/btn_customizados"
@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/btnMultiplicacao"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btnSubtracao"
         android:background="@drawable/btn_customizados"
@@ -41,12 +41,21 @@
     <Button
         android:id="@+id/btnDivisao"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btnMultiplicacao"
         android:background="@drawable/btn_customizados"
         android:layout_marginTop="20dp"
         android:text="@string/btn_divisao" />
+    <Button
+        android:id="@+id/btnPersona"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnMultiplicacao"
+        android:background="@drawable/btn_customizados"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_persona" />
 
     <!-- espaço para banner AD-->
 

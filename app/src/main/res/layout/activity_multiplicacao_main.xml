@@ -20,6 +20,8 @@
         android:background="@color/colorPrimary"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        app:theme="@style/NavigationDrawerStyle"
+
 
         app:menu="@menu/activity_adicao_main_drawer" />
 
