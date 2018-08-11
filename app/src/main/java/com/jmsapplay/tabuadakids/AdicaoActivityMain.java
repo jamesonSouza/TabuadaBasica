@@ -1,8 +1,7 @@
-package com.jmsapplay.tabuadabasica;
+package com.jmsapplay.tabuadakids;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,7 +22,7 @@ import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DivisaoActivityMain extends AppCompatActivity
+public class AdicaoActivityMain extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ListView listaDeMenu, listaAdicao;
@@ -31,6 +30,8 @@ public class DivisaoActivityMain extends AppCompatActivity
     TextView txtValor1, txtValor2, txtResultado;
     EditText editAdicao;
     ListView listadicao;
+
+    MainActivity mainBanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,11 +82,9 @@ public class DivisaoActivityMain extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-
             finish();
             Intent  voltar = new Intent( this, MainActivity.class);
             startActivity(voltar);
-
             return true;
         }
 
@@ -149,40 +148,40 @@ public class DivisaoActivityMain extends AppCompatActivity
 
         if (_find == 12 && _find1 ==12 ) {
 
-
-
-            for(valor1 = 1 ;valor1 <=10;valor1++){
+            for (valor1 = 0; valor1 <= 10; valor1++) {
 
                 lista.add("Tabuada do " + valor1);
+                for (valor2 = 0; valor2 <= 10; valor2++) {
 
-                for(valor2 = 1; valor2<=10; valor2++){
+                    resultado = valor1 + valor2;
 
-                    lista.add(String.valueOf(valor1*valor2) + "   /   " +String.valueOf(valor1)+ "   =   " + String.valueOf(valor2));
+                    lista.add(String.valueOf(valor1) + "  +  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
+                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
+                    listadicao.setAdapter(adpter);
+
+
+                }
+
+            }
+        } else {
+            for (valor1 = _find1; valor1 <= _find; valor1++) {
+
+                lista.add("Tabuada do " + valor1);
+                for (valor2 = 0; valor2 <= 10; valor2++) {
+
+                    resultado = valor1 + valor2;
+
+                    lista.add(String.valueOf(valor1) + "  +  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
                     ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
                     listadicao.setAdapter(adpter);
 
 
                 }
             }
-
-        } else {
-            for (valor1 = _find1; valor1 <= _find; valor1++) {
-                if(valor1==0){
-                    valor1 ++;
-                }
-                lista.add("Tabuada do " + valor1);
-                listadicao.setBackgroundColor(Color.rgb(247, 93, 93));
-
-                    for(valor2 = 1; valor2<=10; valor2++){
-                        lista.add(String.valueOf(valor1*valor2) + "   /   " +String.valueOf(valor1)+ "   =   " + String.valueOf(valor2));
-                        ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
-                        listadicao.setAdapter(adpter);
-
-
-                    }
-            }
         }
     }
+
+    @Override
     protected void onResume() {
         super.onResume();
 

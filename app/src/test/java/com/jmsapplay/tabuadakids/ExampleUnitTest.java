@@ -1,4 +1,4 @@
-package com.jmsapplay.tabuadabasica;
+package com.jmsapplay.tabuadakids;
 
 import org.junit.Test;
 

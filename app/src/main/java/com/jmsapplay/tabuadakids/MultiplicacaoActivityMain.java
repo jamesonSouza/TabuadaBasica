@@ -1,4 +1,4 @@
-package com.jmsapplay.tabuadabasica;
+package com.jmsapplay.tabuadakids;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
