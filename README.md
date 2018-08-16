@@ -1,7 +1,7 @@
 # TabuadaBasica
 Tabuada desenvolvida simplesmente para estudo de qualquer pessoa
 
-# Esse projeto consciste em construção de tabuada usando Framework  ANDROID STUDIO 3.1
+Esse projeto consciste em construção de tabuada usando Framework  ANDROID STUDIO 3.1
  simples projeto para assimilação de conteudo publicado na PLAYSTORE atualmente se encontra na versão.
  Foi usado alguns  componentes básicos como TextView, Button, ListView.
 
