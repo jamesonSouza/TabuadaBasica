@@ -63,11 +63,6 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
             }
         });
 
-
-
-
-
-
         btnCusAd.setOnClickListener(new View.OnClickListener() {
 
 
@@ -76,24 +71,27 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
 
 
                 try {
-                    valor1 = Integer.parseInt( editValor1.getText().toString());
-                    valor2 = Integer.parseInt( editValor2.getText().toString());
-                    if (editValor1.getText().toString().length() > 0 && editValor2.getText().toString().length() > 0) {
+                    valor1 = Integer.parseInt(editValor1.getText().toString());
+                    valor2 = Integer.parseInt(editValor2.getText().toString());
+                    if (editValor1.getText().toString().length() > 0) {
                         calcularTabuada(valor1, valor2);
 
                     } else {
                         editValor1.setError("!");
                         editValor1.requestFocus();
+
+
+                    }
+                    if (editValor2.getText().toString().length() > 0) {
+                        calcularTabuada(valor1, valor2);
+                    } else {
+                        editValor2.requestFocus();
                         editValor2.setError("!");
 
                     }
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),"Os campos devem ser preenchidos!",Toast.LENGTH_LONG).show();
                 }
-
-
-
-
 
             }
         });
@@ -106,14 +104,21 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
 
 
                 try {
-                    valor1 = Integer.parseInt( editValor1.getText().toString());
-                    valor2 = Integer.parseInt( editValor2.getText().toString());
-                    if (editValor1.getText().toString().length() > 0 && editValor2.getText().toString().length() > 0) {
-                        calcularTabuadaSub(valor1,valor2);
+                    valor1 = Integer.parseInt(editValor1.getText().toString());
+                    valor2 = Integer.parseInt(editValor2.getText().toString());
+                    if (editValor1.getText().toString().length() > 0) {
+                        calcularTabuadaSub(valor1, valor2);
 
                     } else {
                         editValor1.setError("!");
                         editValor1.requestFocus();
+
+
+                    }
+                    if (editValor2.getText().toString().length() > 0) {
+                        calcularTabuadaSub(valor1, valor2);
+                    } else {
+                        editValor2.requestFocus();
                         editValor2.setError("!");
 
                     }
@@ -122,11 +127,10 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
                 }
 
 
-
-
-
             }
         });
+
+        //botao multiplicação
         btnMult.setOnClickListener(new View.OnClickListener() {
 
 
@@ -135,23 +139,29 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
 
 
                 try {
-                    valor1 = Integer.parseInt( editValor1.getText().toString());
-                    valor2 = Integer.parseInt( editValor2.getText().toString());
-                    if (editValor1.getText().toString().length() > 0 && editValor2.getText().toString().length() > 0) {
-                        calcularTabuadaMult(valor1,valor2);
 
-                    } else {
-                        editValor1.setError("!");
-                        editValor1.requestFocus();
-                        editValor2.setError("!");
+                        valor1 = Integer.parseInt(editValor1.getText().toString());
+                        valor2 = Integer.parseInt(editValor2.getText().toString());
+                        if (editValor1.getText().toString().length() > 0) {
+                            calcularTabuadaMult(valor1, valor2);
 
-                    }
+                        } else {
+                            editValor1.setError("!");
+                            editValor1.requestFocus();
+
+
+                        }
+                        if (editValor2.getText().toString().length() > 0) {
+                            calcularTabuadaMult(valor1, valor2);
+                        } else {
+                            editValor2.requestFocus();
+                            editValor2.setError("!");
+
+                        }
+
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),"Os campos devem ser preenchidos!" ,Toast.LENGTH_LONG).show();
                 }
-
-
-
 
 
             }
@@ -166,22 +176,25 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
                 try {
                     valor1 = Integer.parseInt( editValor1.getText().toString());
                     valor2 = Integer.parseInt( editValor2.getText().toString());
-                    if (editValor1.getText().toString().length() > 0 && editValor2.getText().toString().length() > 0) {
+                    if (editValor1.getText().toString().length() > 0 ) {
                         calcularTabuadaDiv(valor1,valor2);
 
                     } else {
                         editValor1.setError("!");
                         editValor1.requestFocus();
+
+
+                    }
+                    if(editValor2.getText().toString().length() > 0){
+                        calcularTabuadaDiv(valor1,valor2);
+                    }else{
+                        editValor2.requestFocus();
                         editValor2.setError("!");
 
                     }
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),"Os campos devem ser preenchidos!" ,Toast.LENGTH_LONG).show();
                 }
-
-
-
-
 
             }
         });
@@ -214,11 +227,6 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-
-
-
-
-
     }
 
     @Override
@@ -236,12 +244,12 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
             for (valor1 = val1; valor1 <= val2; valor1++) {
 
                 //  list.add("Tabuada do " + valor1);
-                for (valor2 = val1; valor2 <= val2; valor2++) {
+                for (valor2 = 0; valor2 <= 10; valor2++) {
 
                     resultado = valor1 + valor2;
 
                     list.add(String.valueOf(valor1) + "  +  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_selectable_list_item, list);
+                    MinhaLista adpter = new MinhaLista (list,this);
                     listPersona.setAdapter(adpter);
                 }
             }
@@ -259,12 +267,12 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
         for (valor1 = val1; valor1 <= val2; valor1++) {
 
             //  list.add("Tabuada do " + valor1);
-            for (valor2 = val1; valor2 <= val2; valor2++) {
+            for (valor2 = 0; valor2 <= 10; valor2++) {
 
 
                 list.add(String.valueOf(valor1 + valor2) + "  -  " + String.valueOf(valor1) + "  =  " + String.valueOf(valor2));
                 // lista.add(String.valueOf(valor1) + " - " + String.valueOf(valor2) + " = " + String.valueOf(resultado));
-                ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_selectable_list_item, list);
+                MinhaLista adpter = new MinhaLista (list,this);
                 listPersona.setAdapter(adpter);
             }
         }
@@ -279,14 +287,14 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
         for (valor1 = val1; valor1 <= val2; valor1++) {
 
             //  list.add("Tabuada do " + valor1);
-            for (valor2 = val1; valor2 <= val2; valor2++) {
+            for (valor2 = 0; valor2 <= 10; valor2++) {
 
 
 
                 resultado = valor1 * valor2;
 
                 list.add(String.valueOf(valor1) + "  x  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_selectable_list_item, list);
+                MinhaLista adpter = new MinhaLista (list,this);
                 listPersona.setAdapter(adpter);
             }
         }
@@ -296,23 +304,20 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
     private void calcularTabuadaDiv(int val1 , int val2) {
         List<String> list = new ArrayList<>();
 
-
         for (valor1 = val1; valor1 <= val2; valor1++) {
 
-            //  list.add("Tabuada do " + valor1);
-            for (valor2 = val1; valor2 <= 10; valor2++) {
 
 
-                for (valor2 = 1; valor2 <= 10; valor2++) {
+
                     list.add(String.valueOf(valor1 * valor2) + "   /   " + String.valueOf(valor1) + "   =   " + String.valueOf(valor2));
-                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, list);
+                    MinhaLista adpter = new MinhaLista (list,this);
                     listPersona.setAdapter(adpter);
-                }
             }
 
+
         }
-    }
-    protected void onResume() {
+
+        protected void onResume() {
         super.onResume();
 
         bannerADS();

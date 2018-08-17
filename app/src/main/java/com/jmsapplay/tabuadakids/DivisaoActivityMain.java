@@ -158,7 +158,7 @@ public class DivisaoActivityMain extends AppCompatActivity
                 for(valor2 = 1; valor2<=10; valor2++){
 
                     lista.add(String.valueOf(valor1*valor2) + "   /   " +String.valueOf(valor1)+ "   =   " + String.valueOf(valor2));
-                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
+                    MinhaLista adpter = new MinhaLista (lista,this);
                     listadicao.setAdapter(adpter);
 
 
@@ -171,11 +171,11 @@ public class DivisaoActivityMain extends AppCompatActivity
                     valor1 ++;
                 }
                 lista.add("Tabuada do " + valor1);
-                listadicao.setBackgroundColor(Color.rgb(247, 93, 93));
+
 
                     for(valor2 = 1; valor2<=10; valor2++){
                         lista.add(String.valueOf(valor1*valor2) + "   /   " +String.valueOf(valor1)+ "   =   " + String.valueOf(valor2));
-                        ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
+                        MinhaLista adpter = new MinhaLista (lista,this);
                         listadicao.setAdapter(adpter);
 
 

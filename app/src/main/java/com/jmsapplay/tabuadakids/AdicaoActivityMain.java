@@ -2,6 +2,7 @@ package com.jmsapplay.tabuadakids;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -27,11 +28,16 @@ public class AdicaoActivityMain extends AppCompatActivity
 
     ListView listaDeMenu, listaAdicao;
     Integer valor1, valor2, resultado;
-    TextView txtValor1, txtValor2, txtResultado;
+    TextView txtView, txtValor2, txtResultado;
     EditText editAdicao;
     ListView listadicao;
 
     MainActivity mainBanner;
+
+
+    String pasta = "fonts/";
+    String fontTTFChack= "Chack_Risco.ttf";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +57,9 @@ public class AdicaoActivityMain extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+      //  txtView = findViewById(R.id.simples_lista);
+        Typeface TTFChack = Typeface.createFromAsset(getAssets(), pasta+fontTTFChack);
+//        txtView.setTypeface(TTFChack);
         listadicao = findViewById(R.id.listaAdicao);
         LacoAdicao(12, 12);
     }
@@ -156,7 +165,7 @@ public class AdicaoActivityMain extends AppCompatActivity
                     resultado = valor1 + valor2;
 
                     lista.add(String.valueOf(valor1) + "  +  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
+                    MinhaLista adpter = new MinhaLista (lista,this);
                     listadicao.setAdapter(adpter);
 
 
@@ -172,7 +181,7 @@ public class AdicaoActivityMain extends AppCompatActivity
                     resultado = valor1 + valor2;
 
                     lista.add(String.valueOf(valor1) + "  +  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
+                    MinhaLista adpter = new MinhaLista (lista,this);
                     listadicao.setAdapter(adpter);
 
 
@@ -194,4 +203,6 @@ public class AdicaoActivityMain extends AppCompatActivity
         adView.loadAd(adRequest);
 
     }
+
+
 }

@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/ic_meu_laucher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.jmsapplay.tabuadakids.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,30 +17,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jmsapplay.tabuadakids.AdicaoActivityMain"
+            android:name=".AdicaoActivityMain"
             android:label="@string/title_activity_adicao_main"
+
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.jmsapplay.tabuadakids.SubtracaoActivityMain"
+            android:name=".SubtracaoActivityMain"
             android:label="@string/title_activity_subtracao_main"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.jmsapplay.tabuadakids.MultiplicacaoActivityMain"
+            android:name=".MultiplicacaoActivityMain"
             android:label="@string/title_activity_multiplicacao_main"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.jmsapplay.tabuadakids.DivisaoActivityMain"
+            android:name=".DivisaoActivityMain"
             android:label="@string/title_activity_divisao_main"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.jmsapplay.tabuadakids.PersonaActivity"
+            android:name=".PersonaActivity"
             android:label="@string/title_activity_persona"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".GameMainActivity"></activity>
     </application>
 
 </manifest>

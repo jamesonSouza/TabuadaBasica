@@ -156,7 +156,7 @@ public class MultiplicacaoActivityMain extends AppCompatActivity
                     resultado = valor1 * valor2;
 
                     lista.add(String.valueOf(valor1) + "  x  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
+                    MinhaLista adpter = new MinhaLista (lista,this);
                     listadicao.setAdapter(adpter);
 
 
@@ -172,7 +172,7 @@ public class MultiplicacaoActivityMain extends AppCompatActivity
                     resultado = valor1 * valor2;
 
                     lista.add(String.valueOf(valor1) + "  x  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                    ArrayAdapter<String> adpter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simples_lista_texto, lista);
+                    MinhaLista adpter = new MinhaLista (lista,this);
                     listadicao.setAdapter(adpter);
 
                 }

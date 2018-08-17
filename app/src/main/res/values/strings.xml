@@ -43,9 +43,15 @@
     <string name="btn_cus_div">/</string>
     <string name="txt_menor_igual">>=</string>
 
-    <!--ADS tags-->
+    <!--ADS tags  oficial ca-app-pub-9275202133724780/3108357143-->
+    <!--teste ad banner cca-app-pub-3940256099942544/6300978111-->
 
-    <string name="banner_ad">ca-app-pub-9275202133724780/3108357143</string>
+    <string name="banner_ad">cca-app-pub-3940256099942544/6300978111</string>
 
+    <!--Ad inter oficial cca-app-pub-3940256099942544/6300978111-->
+    <!--Ad inter teste ca-app-pub-3940256099942544/1033173712-->
+
+    <string name="inter_ad">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="numeros">0123456789</string>
     <!--fim ADS -->
 </resources>

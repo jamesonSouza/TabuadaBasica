@@ -16,14 +16,17 @@
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/simples_lista"
-    android:layout_width="230dp"
+    android:layout_width="350dp"
     android:layout_height="36dp"
     android:textAppearance="?android:attr/textAlignment"
 
     android:layout_marginRight="20dp"
-    android:textColor="@color/colorFont"
-    android:textSize="29sp"
-    android:paddingStart="1dip"
+    android:textColor="@color/colorFontBr"
+    android:textSize="34sp"
+    android:textStyle="normal"
+    android:gravity="center"
+    android:layout_centerVertical="true"
+    android:paddingStart="10dip"
     android:paddingEnd="1dip"
 
     />
