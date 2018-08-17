@@ -32,11 +32,9 @@ public class AdicaoActivityMain extends AppCompatActivity
     EditText editAdicao;
     ListView listadicao;
 
-    MainActivity mainBanner;
-
 
     String pasta = "fonts/";
-    String fontTTFChack= "Chack_Risco.ttf";
+    String fontTTFChack = "Chack_Risco.ttf";
 
 
     @Override
@@ -57,8 +55,8 @@ public class AdicaoActivityMain extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-      //  txtView = findViewById(R.id.simples_lista);
-        Typeface TTFChack = Typeface.createFromAsset(getAssets(), pasta+fontTTFChack);
+        //  txtView = findViewById(R.id.simples_lista);
+        Typeface TTFChack = Typeface.createFromAsset(getAssets(), pasta + fontTTFChack);
 //        txtView.setTypeface(TTFChack);
         listadicao = findViewById(R.id.listaAdicao);
         LacoAdicao(12, 12);
@@ -92,7 +90,7 @@ public class AdicaoActivityMain extends AppCompatActivity
         if (id == R.id.action_settings) {
 
             finish();
-            Intent  voltar = new Intent( this, MainActivity.class);
+            Intent voltar = new Intent(this, MainActivity.class);
             startActivity(voltar);
             return true;
         }
@@ -111,36 +109,36 @@ public class AdicaoActivityMain extends AppCompatActivity
             LacoAdicao(0, 0);
 
         } else if (id == R.id.m1) {
-            LacoAdicao(1 ,1);
+            LacoAdicao(1, 1);
 
         } else if (id == R.id.m2) {
-            LacoAdicao(2,2);
+            LacoAdicao(2, 2);
 
         } else if (id == R.id.m3) {
-            LacoAdicao(3,3);
+            LacoAdicao(3, 3);
         } else if (id == R.id.m4) {
-            LacoAdicao(4,4);
+            LacoAdicao(4, 4);
 
         } else if (id == R.id.m5) {
-            LacoAdicao(5,5);
+            LacoAdicao(5, 5);
 
         } else if (id == R.id.m6) {
-            LacoAdicao(6,6);
+            LacoAdicao(6, 6);
 
         } else if (id == R.id.m7) {
-            LacoAdicao(7,7);
+            LacoAdicao(7, 7);
 
         } else if (id == R.id.m8) {
-            LacoAdicao(8,8);
+            LacoAdicao(8, 8);
 
         } else if (id == R.id.m9) {
-            LacoAdicao(9,9);
+            LacoAdicao(9, 9);
 
         } else if (id == R.id.m10) {
-            LacoAdicao(10,10);
+            LacoAdicao(10, 10);
 
-        }else if (id==R.id.mt){
-            LacoAdicao(12,12);
+        } else if (id == R.id.mt) {
+            LacoAdicao(12, 12);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -149,13 +147,12 @@ public class AdicaoActivityMain extends AppCompatActivity
     }
 
 
-
     private void LacoAdicao(int _find, int _find1) {
 
         List<String> lista = new ArrayList<>();
 
 
-        if (_find == 12 && _find1 ==12 ) {
+        if (_find == 12 && _find1 == 12) {
 
             for (valor1 = 0; valor1 <= 10; valor1++) {
 
@@ -165,7 +162,7 @@ public class AdicaoActivityMain extends AppCompatActivity
                     resultado = valor1 + valor2;
 
                     lista.add(String.valueOf(valor1) + "  +  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                    MinhaLista adpter = new MinhaLista (lista,this);
+                    MinhaLista adpter = new MinhaLista(lista, this);
                     listadicao.setAdapter(adpter);
 
 
@@ -181,7 +178,7 @@ public class AdicaoActivityMain extends AppCompatActivity
                     resultado = valor1 + valor2;
 
                     lista.add(String.valueOf(valor1) + "  +  " + String.valueOf(valor2) + "  =  " + String.valueOf(resultado));
-                    MinhaLista adpter = new MinhaLista (lista,this);
+                    MinhaLista adpter = new MinhaLista(lista, this);
                     listadicao.setAdapter(adpter);
 
 
@@ -196,7 +193,8 @@ public class AdicaoActivityMain extends AppCompatActivity
 
         bannerADS();
     }
-    public  void bannerADS(){
+
+    public void bannerADS() {
         AdView adView;
         adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

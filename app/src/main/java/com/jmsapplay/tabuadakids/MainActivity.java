@@ -20,7 +20,7 @@ import com.google.android.gms.ads.MobileAds;
 public class MainActivity extends AppCompatActivity  {
 
 
-    Button btnAdicao, btnSubtracao, btnMultiplicacao, btnDivisao, btnPersona;
+    Button btnAdicao, btnSubtracao, btnMultiplicacao, btnDivisao, btnPersona, btnGame;
     private InterstitialAd  interstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity  {
         btnMultiplicacao= findViewById(R.id.btnMultiplicacao);
         btnDivisao= findViewById(R.id.btnDivisao);
         btnPersona = findViewById(R.id.btnPersona);
-
+        btnGame = findViewById(R.id.btnGame);
         MobileAds.initialize(this, "ca-app-pub-9275202133724780~8565107078");
 
         interstitialAd = new InterstitialAd(this);
         //ca-app-pub-3940256099942544/1033173712
-        interstitialAd.setAdUnitId(String.valueOf(R.string.inter_ad));
+        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
         interstitialAd.setAdListener(new AdListener(){
@@ -52,7 +52,15 @@ public class MainActivity extends AppCompatActivity  {
 
         });
 
+        btnGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                interstitialAd.loadAd(new AdRequest.Builder().build());
+                Intent proximaAct = new Intent( MainActivity.this, GameMainActivity.class);
+                startActivity(proximaAct);
+            }
+        });
         btnAdicao.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -128,7 +136,7 @@ public class MainActivity extends AppCompatActivity  {
                 Toast.makeText(this, "Obrigado por usar!", Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnSobre:
-                Toast.makeText(this, "Sobre", Toast.LENGTH_LONG).show();
+
             default:
                 break;
         }

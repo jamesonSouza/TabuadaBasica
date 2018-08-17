@@ -43,15 +43,40 @@
     <string name="btn_cus_div">/</string>
     <string name="txt_menor_igual">>=</string>
 
+    <!--Lista de elogios-->
+    <string name="txt_elogio1">Muito bem!</string>
+    <string name="txt_elogio2">Nossa incrível!</string>
+    <string name="txt_elogio3">Meus parabéns!</string>
+    <string name="txt_elogio4">Continue assim!</string>
+    <string name="txt_elogio5">Eita! Que impressionante</string>
+
+    <!--fim Lista de elogios-->
+
+
+    <!--Lista de elogios erro-->
+
+    <string name="txt_elogio_erro1">Não desista!</string>
+    <string name="txt_elogio_erro2">Vai conseguir na próxima!</string>
+    <string name="txt_elogio_erro3">Vamos, vamos!</string>
+    <string name="txt_elogio_erro4">Mais uma vai!</string>
+    <string name="txt_elogio_erro5">Na próxima é acerto!</string>
+
+
+    <!--fim Lista de elogios erro-->
+
+
     <!--ADS tags  oficial ca-app-pub-9275202133724780/3108357143-->
     <!--teste ad banner cca-app-pub-3940256099942544/6300978111-->
 
-    <string name="banner_ad">cca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad">ca-app-pub-9275202133724780/3108357143</string>
 
     <!--Ad inter oficial cca-app-pub-3940256099942544/6300978111-->
     <!--Ad inter teste ca-app-pub-3940256099942544/1033173712-->
 
-    <string name="inter_ad">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="inter_ad">ca-app-pub-3940256099942544/6300978111</string>
     <string name="numeros">0123456789</string>
+    <string name="ed_resposta">Responda</string>
+    <string name="btn_aprovar">Verificar</string>
+    <string name="btn_game">Game</string>
     <!--fim ADS -->
 </resources>

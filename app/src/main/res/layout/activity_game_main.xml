@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.jmsapplay.tabuadakids.GameMainActivity">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-         android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
         <ImageView
@@ -18,56 +19,138 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:cropToPadding="false"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/loza" />
 
-        <Button
-            android:id="@+id/btnVal4"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/btnVal1"
-            android:layout_toEndOf="@+id/btnVal1"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btnVal1"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="179dp"
-            android:layout_marginStart="44dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btnVal2"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btnVal4"
-            android:layout_toStartOf="@+id/btnVal4"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btnVal3"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/btnVal4"
-            android:layout_below="@+id/btnVal4"
-            android:text="Button" />
-
         <TextView
             android:id="@+id/txtQuestao"
-            android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="64dp"
             android:layout_marginTop="115dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/colorFontBr"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/editResposta"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="160dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/ed_resposta"
+            android:inputType="number"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnVerificar"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="98dp"
+            android:background="@drawable/btn_customizados"
+            android:text="@string/btn_aprovar" />
+
+        <TextView
+            android:id="@+id/txtEscore"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="65dp"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorFontBr"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtFrase"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="213dp"
+            android:text=""
+            android:textColor="@color/colorFontBr"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/txtCorretaResposta"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/txtEscore"
+            android:layout_marginLeft="20dp"
+            android:text=""
+            android:layout_marginTop="170dp"
+            android:textColor="@color/colorFontBr"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/txtErros"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtEscore"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorFontBr"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtPorcentagem"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:textColor="@color/colorFontBr"
+            android:textAlignment="textStart"
+            android:layout_toEndOf="@+id/editResposta"
+            android:text="" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#008d2f"
+            android:enabled="false"
+            android:text="
+" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorFontBr"
+            android:background="#008d2f"
+            android:text="Voltar" />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

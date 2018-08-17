@@ -60,18 +60,27 @@
 
     <Button
         android:id="@+id/btnPersona"
-        android:layout_width="350dp"
-
+        android:layout_width="207dp"
+        android:layout_marginTop="1dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btnDivisao"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="1dp"
         android:background="@drawable/btn_customizados"
-        android:drawableLeft="@drawable/tudo"
+
         android:text="@string/btn_persona" />
 
     <!-- espaço para banner AD-->
+
+    <Button
+        android:id="@+id/btnGame"
+        android:layout_width="173dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnDivisao"
+        android:background="@drawable/btn_customizados"
+
+        android:text="@string/btn_game" />
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
