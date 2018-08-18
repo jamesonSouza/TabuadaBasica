@@ -157,6 +157,7 @@ public class AdicaoActivityMain extends AppCompatActivity
             for (valor1 = 0; valor1 <= 10; valor1++) {
 
                 lista.add("Tabuada do " + valor1);
+
                 for (valor2 = 0; valor2 <= 10; valor2++) {
 
                     resultado = valor1 + valor2;

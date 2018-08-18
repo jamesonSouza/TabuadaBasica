@@ -57,8 +57,10 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View v) {
 
                 interstitialAd.loadAd(new AdRequest.Builder().build());
+
                 Intent proximaAct = new Intent( MainActivity.this, GameMainActivity.class);
                 startActivity(proximaAct);
+                finish();
             }
         });
         btnAdicao.setOnClickListener(new View.OnClickListener() {
@@ -66,13 +68,10 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
 
-
-
-
                 interstitialAd.loadAd(new AdRequest.Builder().build());
                 Intent proximaAct = new Intent( MainActivity.this, AdicaoActivityMain.class);
                 startActivity(proximaAct);
-
+                finish();
 
             }
         });
@@ -83,9 +82,10 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 showInterstitial();
-                interstitialAd.loadAd(new AdRequest.Builder().build());
+
                 Intent proximaAct = new Intent( MainActivity.this, SubtracaoActivityMain.class);
                 startActivity(proximaAct);
+                finish();
             }
         });
 
@@ -93,9 +93,10 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 showInterstitial();
-                interstitialAd.loadAd(new AdRequest.Builder().build());
+
                 Intent proximaAct = new Intent( MainActivity.this, MultiplicacaoActivityMain.class);
                 startActivity(proximaAct);
+                finish();
 
             }
         });
@@ -104,9 +105,10 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 showInterstitial();
-                interstitialAd.loadAd(new AdRequest.Builder().build());
+
                 Intent proximaAct = new Intent( MainActivity.this, DivisaoActivityMain.class);
                 startActivity(proximaAct);
+                finish();
             }
         });
         btnPersona.setOnClickListener(new View.OnClickListener() {
@@ -116,9 +118,10 @@ public class MainActivity extends AppCompatActivity  {
                 interstitialAd.loadAd(new AdRequest.Builder().build());
                 Intent proximaAct = new Intent( MainActivity.this, PersonaActivity.class);
                 startActivity(proximaAct);
+                finish();
             }
         });
-        showInterstitial();
+
     }
 
     @Override
@@ -133,6 +136,7 @@ public class MainActivity extends AppCompatActivity  {
         switch (item.getItemId()) {
             case R.id.btnSair:
                 finish();
+                showInterstitial();
                 Toast.makeText(this, "Obrigado por usar!", Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnSobre:
@@ -147,7 +151,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onResume() {
         super.onResume();
         bannerADS();
-      //  interstitialAd.loadAd(new AdRequest.Builder().build());
+        onAdLoaded();
     }
 
     public  void bannerADS(){
@@ -168,4 +172,7 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
+    public void onAdLoaded() {
+        showInterstitial();
+    }
 }

@@ -1,5 +1,6 @@
 package com.jmsapplay.tabuadakids;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -211,6 +212,8 @@ Button btnCusAd, btnCusSub, btnMult, btnDiv;
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.btnSair:
+                Intent i  = new Intent(PersonaActivity.this, MainActivity.class);
+                startActivity(i);
                 finish();
 
                 break;

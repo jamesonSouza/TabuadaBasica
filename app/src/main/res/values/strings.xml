@@ -78,5 +78,6 @@
     <string name="ed_resposta">Responda</string>
     <string name="btn_aprovar">Verificar</string>
     <string name="btn_game">Game</string>
+    <string name="txt_titulo_game">Game</string>
     <!--fim ADS -->
 </resources>

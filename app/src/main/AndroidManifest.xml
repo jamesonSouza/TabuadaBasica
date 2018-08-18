@@ -42,7 +42,10 @@
             android:label="@string/title_activity_persona"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".GameMainActivity"></activity>
+        <activity android:name=".GameMainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/txt_titulo_game"
+            android:windowSoftInputMode="adjustResize|adjustPan"></activity>
     </application>
 
 </manifest>

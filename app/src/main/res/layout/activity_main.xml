@@ -4,29 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    >
 
 
     <Button
         android:id="@+id/btnAdicao"
-        android:layout_width="350dp"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="1dp"
+         android:layout_marginTop="1dp"
         android:background="@drawable/btn_customizados"
         android:drawableLeft="@drawable/adicao"
         android:text="@string/btn_adicao" />
 
     <Button
         android:id="@+id/btnSubtracao"
-        android:layout_width="350dp"
-
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btnAdicao"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="1dp"
         android:background="@drawable/btn_customizados"
         android:drawableLeft="@drawable/menus"
@@ -34,33 +34,29 @@
 
     <Button
         android:id="@+id/btnMultiplicacao"
-        android:layout_width="350dp"
-
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btnSubtracao"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="1dp"
+       android:layout_marginTop="1dp"
         android:background="@drawable/btn_customizados"
         android:drawableLeft="@drawable/vezes"
         android:text="@string/btn_multiplicacao" />
 
     <Button
         android:id="@+id/btnDivisao"
-        android:layout_width="350dp"
-
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btnMultiplicacao"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="1dp"
+       android:layout_marginTop="1dp"
         android:background="@drawable/btn_customizados"
         android:drawableLeft="@drawable/dividir"
         android:text="@string/btn_divisao" />
 
     <Button
         android:id="@+id/btnPersona"
-        android:layout_width="207dp"
+        android:layout_width="180dp"
         android:layout_marginTop="1dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -73,13 +69,13 @@
 
     <Button
         android:id="@+id/btnGame"
-        android:layout_width="173dp"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="1dp"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/btnDivisao"
-        android:background="@drawable/btn_customizados"
 
+        android:layout_alignTop="@+id/btnPersona"
+
+        android:layout_toEndOf="@+id/btnPersona"
+        android:background="@drawable/btn_customizados"
         android:text="@string/btn_game" />
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -89,7 +85,9 @@
       android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="MEDIUM_RECTANGLE"
-        ads:adUnitId="@string/banner_ad"></com.google.android.gms.ads.AdView>
+        ads:adUnitId="@string/banner_ad">
+
+    </com.google.android.gms.ads.AdView>
     <!-- fim ad -->
 
 
