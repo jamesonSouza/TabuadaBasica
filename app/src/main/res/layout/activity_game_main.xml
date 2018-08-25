@@ -149,7 +149,7 @@
             android:layout_alignParentEnd="true"
             android:textColor="@color/colorFontBr"
             android:background="#008d2f"
-            android:text="Voltar" />
+            android:text="@string/voltar" />
 
     </RelativeLayout>
 

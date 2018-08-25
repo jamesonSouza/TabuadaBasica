@@ -39,28 +39,26 @@ public class MainActivity extends AppCompatActivity  {
 
         interstitialAd = new InterstitialAd(this);
         //ca-app-pub-3940256099942544/1033173712
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+        interstitialAd.setAdUnitId("ca-app-pub-9275202133724780/4038295437");
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
-        interstitialAd.setAdListener(new AdListener(){
-            @Override
-            public void onAdClosed() {
-                // Load the next interstitial.
-                interstitialAd.loadAd(new AdRequest.Builder().build());
-            }
 
-
-        });
 
         btnGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+
+                if (interstitialAd != null && interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    Intent proximaAct = new Intent( MainActivity.this, GameMainActivity.class);
+                    startActivity(proximaAct);
+                    finish();
+
+                }
                 interstitialAd.loadAd(new AdRequest.Builder().build());
 
-                Intent proximaAct = new Intent( MainActivity.this, GameMainActivity.class);
-                startActivity(proximaAct);
-                finish();
             }
         });
         btnAdicao.setOnClickListener(new View.OnClickListener() {
@@ -68,10 +66,15 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
 
+                if (interstitialAd != null && interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    Intent proximaAct = new Intent( MainActivity.this, AdicaoActivityMain.class);
+                    startActivity(proximaAct);
+                    finish();
+
+                }
                 interstitialAd.loadAd(new AdRequest.Builder().build());
-                Intent proximaAct = new Intent( MainActivity.this, AdicaoActivityMain.class);
-                startActivity(proximaAct);
-                finish();
 
             }
         });
@@ -81,22 +84,32 @@ public class MainActivity extends AppCompatActivity  {
         btnSubtracao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showInterstitial();
 
-                Intent proximaAct = new Intent( MainActivity.this, SubtracaoActivityMain.class);
-                startActivity(proximaAct);
-                finish();
+                if (interstitialAd != null && interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    Intent proximaAct = new Intent( MainActivity.this, SubtracaoActivityMain.class);
+                    startActivity(proximaAct);
+                    finish();
+
+                }
+                interstitialAd.loadAd(new AdRequest.Builder().build());
+
             }
         });
 
         btnMultiplicacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showInterstitial();
 
-                Intent proximaAct = new Intent( MainActivity.this, MultiplicacaoActivityMain.class);
-                startActivity(proximaAct);
-                finish();
+                if (interstitialAd != null && interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    Intent proximaAct = new Intent( MainActivity.this, MultiplicacaoActivityMain.class);
+                    startActivity(proximaAct);
+                    finish();
+                }
+                interstitialAd.loadAd(new AdRequest.Builder().build());
 
             }
         });
@@ -104,21 +117,33 @@ public class MainActivity extends AppCompatActivity  {
         btnDivisao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showInterstitial();
+                if (interstitialAd != null && interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    Intent proximaAct = new Intent( MainActivity.this, DivisaoActivityMain.class);
+                    startActivity(proximaAct);
+                    finish();
+                }
+                interstitialAd.loadAd(new AdRequest.Builder().build());
 
-                Intent proximaAct = new Intent( MainActivity.this, DivisaoActivityMain.class);
-                startActivity(proximaAct);
-                finish();
             }
         });
         btnPersona.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showInterstitial();
+
+                if (interstitialAd != null && interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+
+                    Intent proximaAct = new Intent( MainActivity.this, PersonaActivity.class);
+                    startActivity(proximaAct);
+
+                    finish();
+
+                }
                 interstitialAd.loadAd(new AdRequest.Builder().build());
-                Intent proximaAct = new Intent( MainActivity.this, PersonaActivity.class);
-                startActivity(proximaAct);
-                finish();
+
             }
         });
 
@@ -146,6 +171,7 @@ public class MainActivity extends AppCompatActivity  {
         }
         return true;
     }
+
 
     @Override
     protected void onResume() {

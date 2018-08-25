@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Tabuada Básica</string>
-    <string name="btn_adicao">Adição</string>
-    <string name="btn_subtracao">Subtração</string>
-    <string name="btn_multiplicacao">Multiplicação</string>
-    <string name="btn_divisao">Divisão</string>
-    <string name="btn_sair">Sair</string>
-    <string name="btn_sobre">Sobre</string>
+    <string name="app_name">Tablada Básica</string>
+    <string name="btn_adicao">Adición</string>
+    <string name="btn_subtracao">Resta</string>
+    <string name="btn_multiplicacao">Multiplicación</string>
+    <string name="btn_divisao">División</string>
+    <string name="btn_sair">Dejar</string>
+    <string name="btn_sobre">En</string>
     <string name="title_activity_adicao_main">Tabuada de +</string>
     <string name="title_activity_subtracao_main">Tabuada de -</string>
     <string name="title_activity_multiplicacao_main">Tabuada de X</string>
@@ -15,7 +15,7 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Voltar</string>
+    <string name="action_settings">Regreso</string>
     <string name="tabuada_0">Tabuada do  0</string>
     <string name="tabuada_1">Tabuada do  1</string>
     <string name="tabuada_2">Tabuada do  2</string>
@@ -27,16 +27,16 @@
     <string name="tabuada_8">Tabuada do  8</string>
     <string name="tabuada_9">Tabuada do  9</string>
     <string name="tabuada_10">Tabuada do 10</string>
-    <string name="tabuada_td">Todas de 0 à 10</string>
+    <string name="tabuada_td">Todos de 0 à 10</string>
     <string name="tabuada_adicao">Tabuada de +</string>
     <string name="tabuada_sub">Tabuada de -</string>
     <string name="tabuada_multi">Tabuada de x</string>
     <string name="tabuada_divi">Tabuada de /</string>
-    <string name="title_activity_persona">Tabuada Personalizada</string>
+    <string name="title_activity_persona">Tabuada costumbre</string>
 
     <string name="valor_1">Num 1</string>
     <string name="valor_2">Num 2</string>
-    <string name="btn_persona">TABUADA PERSONALIZÁVEL</string>
+    <string name="btn_persona">Tabuada costumbre</string>
     <string name="btn_cus_ad">+</string>
     <string name="btn_cus_su">-</string>
     <string name="btn_cus_mu">x</string>
@@ -44,22 +44,22 @@
     <string name="txt_menor_igual">>=</string>
 
     <!--Lista de elogios-->
-    <string name="txt_elogio1">Muito bem!</string>
-    <string name="txt_elogio2">Nossa incrível!</string>
-    <string name="txt_elogio3">Meus parabéns!</string>
-    <string name="txt_elogio4">Continue assim!</string>
-    <string name="txt_elogio5">Eita! Que impressionante</string>
+    <string name="txt_elogio1">¡Muy bien!</string>
+    <string name="txt_elogio2">¡Nuestra increíble!</string>
+    <string name="txt_elogio3">¡Felicitaciones!</string>
+    <string name="txt_elogio4">¡Sigue así!</string>
+    <string name="txt_elogio5">Por Dios! Qué impresionante</string>
 
     <!--fim Lista de elogios-->
 
 
     <!--Lista de elogios erro-->
 
-    <string name="txt_elogio_erro1">Não desista!</string>
-    <string name="txt_elogio_erro2">Vai conseguir na próxima!</string>
-    <string name="txt_elogio_erro3">Vamos, vamos!</string>
-    <string name="txt_elogio_erro4">Mais uma vai!</string>
-    <string name="txt_elogio_erro5">Na próxima é acerto!</string>
+    <string name="txt_elogio_erro1">¡No desista!</string>
+    <string name="txt_elogio_erro2">¡Va a conseguir en la próxima!</string>
+    <string name="txt_elogio_erro3">¡Vamos vamos!</string>
+    <string name="txt_elogio_erro4">¡Más una va!</string>
+    <string name="txt_elogio_erro5">En la siguiente es acierto!</string>
 
 
     <!--fim Lista de elogios erro-->
@@ -75,10 +75,10 @@
 
     <string name="inter_ad">ca-app-pub-3940256099942544/6300978111</string>
     <string name="numeros">0123456789</string>
-    <string name="ed_resposta">Responda</string>
-    <string name="btn_aprovar">Verificar</string>
+    <string name="ed_resposta">Responder</string>
+    <string name="btn_aprovar">Comprobar</string>
     <string name="btn_game">Game</string>
     <string name="txt_titulo_game">Game</string>
-    <string name="voltar">Voltar</string>
+    <string name="voltar">Regreso</string>
     <!--fim ADS -->
 </resources>

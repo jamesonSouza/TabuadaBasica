@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/btnSair"
-        android:title="Voltar"
+        android:title="@string/voltar"
         app:showAsAction="ifRoom"
         />
     <item
